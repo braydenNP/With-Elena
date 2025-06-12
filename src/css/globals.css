@@ -4,56 +4,41 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     :root {
-        --primary: #853A3A;
+        --primary: #6BA292;
         --primaryLight: #001F3F;
-        --secondary: #E4A95F;
+        --secondary: #FF8260;
         --secondaryLight: #FFBA43;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4E4B66;
-        --bodyTextColorWhite: #FAFBFC;
+        --headerColor: #1B1B1B;
+        --bodyTextColor: #4A4A47;
+        --bodyTextColorWhite: #FAFAFB;
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
         /* 31px - 49px */
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-        --bodyFontSize: 1rem;
+        --fontSize96: clamp(2.5rem, 8vw, 6rem);       /* ~40px to 96px */
+        --fontSize64: clamp(2rem, 6vw, 4rem);         /* ~32px to 64px */
+        --fontSize48: clamp(1.75rem, 5vw, 3rem);      /* ~28px to 48px */
+        --fontSize36: clamp(1.5rem, 4vw, 2.25rem);    /* ~24px to 36px */
+        --fontSize32: clamp(1.25rem, 3.5vw, 2rem);    /* ~20px to 32px */
+        --bodyFontSize: clamp(1rem, 3vw, 1.5rem);     /* ~16px to 24px */
+
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
 
-    /* roboto-regular - latin */
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'Inter';
+        src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+        font-weight: 400 600; /* Enable the full weight range */
         font-style: normal;
-        font-weight: 400;
-        src: local(''), url('/assets/fonts/roboto-v29-latin-regular.woff2') format('woff2'),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('/assets/fonts/roboto-v29-latin-regular.woff') format('woff');
-
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
-    /* roboto-700 - latin */
+
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'DM Serif Display';
+        src: url('/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+        font-weight: 400; /* Enable the full weight range */
         font-style: normal;
-        font-weight: 700;
-        src: local(''), url('/assets/fonts/roboto-v29-latin-700.woff2') format('woff2'),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('/assets/fonts/roboto-v29-latin-700.woff') format('woff');
-
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    /* roboto-900 - latin */
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 900;
-        src: local(''), url('/assets/fonts/roboto-v29-latin-900.woff2') format('woff2'),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('/assets/fonts/roboto-v29-latin-900.woff') format('woff');
-
-        /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
     body,
@@ -61,7 +46,7 @@
         margin: 0;
         padding: 0;
         font-size: 100%;
-        font-family: 'Roboto', Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         color: var(--bodyTextColor);
         overflow-x: hidden;
     }
@@ -99,6 +84,26 @@
     h6 {
         margin: 0;
         color: var(--headerColor);
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: var(--fontSize96);
+    }
+    h2 {
+        font-size: var(--fontSize64);
+    }
+    h3 {
+        font-size: var(--fontSize48);
+    }
+    h4 {
+        font-size: var(--fontSize36);
+    }
+    h5 {
+        font-size: var(--fontSize32);
+    }
+    h6 {
+        font-size: var(--bodyFontSize);
     }
 
     p,
@@ -118,6 +123,11 @@
     button:hover {
         cursor: pointer;
     }
+    
+    .img {
+        display: block;
+        max-width: 100%;
+    }
 
     .topper {
         font-size: var(--topperFontSize);
@@ -132,8 +142,7 @@
     }
 
     .title {
-        font-size: var(--headerFontSize);
-        font-weight: 900;
+        font-family: 'DM Serif Display';
         line-height: 1.2em;
         text-align: inherit;
         max-width: 43.75rem;
@@ -143,7 +152,8 @@
     }
 
     .text {
-        font-size: var(--bodyFontSize);
+        font-family: 'Inter';
+        font-weight: 400;
         line-height: 1.5em;
         text-align: inherit;
         width: 100%;
@@ -151,41 +161,55 @@
         margin: 0;
         color: var(--bodyTextColor);
     }
+    .text.bold {
+        font-weight: 500;
+    }
 
     .button-solid {
+        font-family: 'Inter';
         font-size: 1rem;
         /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
-        font-weight: 700;
+        font-weight: 400;
         text-align: center;
         margin: 0;
         color: #fff;
         min-width: 9.375rem;
         padding: 0 1.5rem;
-        background-color: var(--primary);
         display: inline-block;
         position: relative;
         z-index: 1;
         /* prevents padding from adding to the width */
         box-sizing: border-box;
+        border-radius: 4px;
+        outline: 2px solid var(--bodyTextColorWhite);
+        transition: color 0.3s, background-color 0.3s, outline 0.3s;
     }
 
-    .button-solid:before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width .3s;
+    .button-solid:hover {
+        color: var(--bodyTextColorWhite);
+        background-color: var(--bodyTextColor);
+        outline: 2px solid var(--bodyTextColor);
+    }
+    .button-solid.cta {
+        color: var(--primary);
+        outline-color: var(--primary);
+        background-color: var(--bodyTextColorWhite);
+    }
+    .button-solid.cta:hover {
+        background-color: var(--primary);
+        color: var(--bodyTextColorWhite);
+        outline-color: var(--primary);
     }
 
-    .button-solid:hover:before {
-        width: 100%;
+    .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    }
+
+    a:hover .arrow {
+    transform: translateX(5px); /* Adjust distance as needed */
     }
 
     .skip {

@@ -5,6 +5,7 @@
 @media only screen and (min-width: 0rem) {
     #footer {
         background-color: #1a1a1a;
+        padding-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
     }
 
     #footer .container {
@@ -25,18 +26,23 @@
         position: relative;
     }
 
+    #footer .logo-group .title {
+        color: var(--bodyTextColorWhite)
+    }
+
     #footer .logo {
         /* 210px - 240px */
         width: clamp(13.125rem, 8vw, 15rem);
+        filter: brightness(10);
         height: auto;
         display: block;
         /* 28px - 44px */
-        margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
     }
 
     #footer .logo-img {
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
     }
 
     #footer .text {
@@ -66,10 +72,10 @@
     }
 
     #footer .header {
+        font-family: "DM Serif Display";
         font-size: 1rem;
         line-height: 1.5em;
         font-weight: 700;
-        margin-bottom: 0.875rem;
         color: var(--bodyTextColorWhite);
         position: relative;
         display: block;
@@ -109,6 +115,7 @@
         display: flex;
         flex-direction: column;
         align-self: stretch;
+        gap: 0.75rem
     }
 
     #footer .contact-li {
@@ -126,7 +133,9 @@
         line-height: 1.5em;
         text-align: left;
         color: var(--bodyTextColorWhite);
-        display: inline-block;
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
     #footer .contact-link:hover {
@@ -167,6 +176,14 @@
         width: auto;
         display: block;
     }
+    #footer .copyright #copyright-text{
+        max-width: 50rem;
+    }
+    #footer .copyright{
+        border-top: 1px solid var(--bodyTextColorWhite);
+        margin-top: clamp(1.75rem, 4.17vw, 2.75rem);
+        padding-top: calc(clamp(1.75rem, 4.17vw, 2.75rem)*0.3);
+    }
 }
 
 /* Tablet - 768px */
@@ -186,6 +203,9 @@
         width: 80%;
         max-width: 19.0625rem;
         margin: 0;
+    }
+    #footer .copyright .text {
+        max-width: 40.0625rem;
     }
 
     #footer .nav,

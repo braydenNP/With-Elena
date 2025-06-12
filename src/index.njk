@@ -1,3 +1,72 @@
 ---
 layout: base.njk
 ---
+<section id="hero">
+    <div class="container">
+        <div class="hero-contents">
+            <h1 class="title">“Transform Your Life with Serenity”</h1>
+            <h4 class="text">Rediscover your balance, renew your energy, and build a lifestyle that nurtures your mind, body, and soul.</h4>
+            <a href="" class="button-solid">Get Started</a>
+        </div>
+        <img class="hero-img" src="/images/coach.png" alt="">
+    </div>
+</section>
+<section id="feature">
+    <div class="container">
+        <h1 class="title">Personalized Wellness for Real Life</h1>
+        <ul class="feature-ul">
+            <li class="feature-li">
+                <div class="icon-box">
+                    <img src="/images/seedling.svg" alt="" class="icon-img">
+                </div>
+                <h6 class="text">Tailored sessions to help you achieve your personal health and wellness goals.</h6>
+            </li>
+            <li class="feature-li">
+                <div class="icon-box">
+                    <img src="/images/food-bowl.svg" alt="" class="icon-img">
+                </div>
+                <h6 class="text">Empower your eating habits with a balance of intuition and evidence-based guidance.</h6>
+            </li>
+            <li class="feature-li">
+                <div class="icon-box">
+                    <img src="/images/sun.svg" alt="" class="icon-img">
+                </div>
+                <h6 class="text">Discover calming techniques that fit into your lifestyle for sustainable mental clarity.</h6>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="testimony">
+    <div class="container">
+        <h1 class="title">Kind Words from the <br/>Community</h1>
+        <ul class="testimony-ul">
+            <li class="testimony-li">
+                <img src="/images/quote.svg" alt="" class="icon-img">
+                <h4 class="text">Working with Elena has truly changed my perspective. I feel more in tune with myself than ever.</h4>
+                <h4 class="text bold">- Jasmine L.</h4>
+            </li>
+            <li class="testimony-li">
+                <img src="/images/quote.svg" alt="" class="icon-img">
+                <h4 class="text">I went from burnt-out to balanced. The coaching style is gentle yet effective.</h4>
+                <h4 class="text bold">- Mark T.</h4>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="blog">
+    <div class="container">
+        <h1 class="title">Latest on my Blog</h1>
+        <ul class="blog-ul">
+            {%- for post in collections.featured | reverse -%}
+                {% include "featured-post.njk" %}
+            {%- endfor -%}
+        </ul>
+        <a href="/blog" class="button-solid">View More Articles <span class="arrow">→</span></a>
+    </div>
+</section>
+<section class="cta">
+    <div class="container">
+        <h1 class="title">Start Your Wellness Journey Today</h1>
+        <a href="" class="button-solid cta">Book a Session</a>
+    </div>
+</section>
