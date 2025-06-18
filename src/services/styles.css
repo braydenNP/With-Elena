@@ -1,0 +1,39 @@
+#hero {
+    background-image: url(/images/walkway.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: calc(clamp(7.5rem, 15.64vw, 12.5rem) + 11rem) 1rem calc(clamp(7.5rem, 15vw, 12rem) + 8rem);
+}
+#hero * {
+    color: var(--bodyTextColorWhite);
+}
+#services .services-ul {
+    list-style: none;
+}
+#services .services-li {
+    box-shadow: 0 0 14.5px 5px rgba(0, 0, 0, 0.1);
+    padding: var(--fontSize32);
+    margin-bottom: var(--fontSize48);
+    text-align: center;
+}
+#services .services-li .text {
+    margin-bottom: var(--fontSize32);
+}
+#four-step .four-step-ul {
+    list-style: none;
+}
+#four-step .four-step-li {
+    margin-top: var(--fontSize48);
+}
+#four-step .four-step-li .icon-box {
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--fontSize32);
+}

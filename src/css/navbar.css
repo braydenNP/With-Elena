@@ -551,6 +551,10 @@ body.scroll #navigation .ul-wrapper {
         transition: color 0.3s;
     }
 
+    #navigation .li-link .li-link{
+        display: inline-block;
+    }
+
     #navigation .li-link:hover {
         color: var(--primary);
     }

@@ -1,0 +1,46 @@
+
+#meet-coach .content-image {
+    border-radius: 73px 20px 73px 20px;
+}
+#philosophy .content-text {
+    margin-bottom: var(--fontSize36);
+}
+#philosophy .quote {
+    color: var(--bodyTextColor);
+}
+@media (min-width: 64rem) {
+    main .title{
+        max-width: none;
+        margin-bottom: var(--fontSize96);
+    }
+    #meet-coach .title{
+        text-align: center;
+    }
+    #meet-coach .contents {
+        display: flex;
+    }
+    #meet-coach .img-wrapper {
+        width: 60%;
+        margin-right: var(--fontSize48);
+        display: inline-block;
+    }
+    #meet-coach .content-text{
+        display: flex;
+        flex-direction: column;
+        margin: auto 0;
+    }
+    #philosophy .container {
+        display: flex;
+    }
+
+}
+#cta {
+    background-color: #F3F6F0;
+}
+#cta .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--fontSize96);
+    text-align: center;
+}
