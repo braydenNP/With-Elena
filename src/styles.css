@@ -106,9 +106,29 @@
 #blog * {
     color: var(--bodyTextColorWhite);
 }
-#blog .title::before {
+#blog h1.title::before {
     content: 'Blog Highlights';
     color: var(--bodyTextColorWhite);
+}
+#blog .blog-ul {
+    list-style: none;
+}
+#blog .blog-li {
+    margin-bottom: var(--fontSize32);
+}
+#blog .blog-li .date {
+    margin-top: 5px;
+}
+#blog .blog-li .blog-img {
+    object-fit: contain;
+    height: 270px;
+    display: block;
+}
+#blog .blog-li .teaser {
+    margin-bottom: 1rem;
+}
+#blog .button-solid {
+    margin-top: var(--fontSize48);
 }
 #cta {
     background-color: #F3F6F0;
@@ -152,5 +172,12 @@
     .testimony-ul {
         display: flex;
         gap: var(--fontSize48);
+    }
+    #blog .blog-li {
+        margin-bottom: 0;
+    }
+    #blog .blog-ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
