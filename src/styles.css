@@ -120,7 +120,7 @@
     margin-top: 5px;
 }
 #blog .blog-li .blog-img {
-    object-fit: contain;
+    object-fit: cover;
     height: 270px;
     display: block;
 }
@@ -179,5 +179,6 @@
     #blog .blog-ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }
