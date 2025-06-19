@@ -142,6 +142,10 @@
         text-decoration: underline;
     }
 
+    #footer .contact-link img{
+        filter: brightness(10);
+    }
+
     #footer .social-group {
         /* pushes away from the other flex items */
         margin-top: auto;

@@ -17,8 +17,14 @@
     margin-bottom: var(--fontSize48);
     text-align: center;
 }
+#services .services-li .title {
+    margin: 0 auto var(--fontSize32);
+}
 #services .services-li .text {
-    margin-bottom: var(--fontSize32);
+    margin: 0 auto var(--fontSize32);
+}
+#services .services-li .button-secondary {
+    margin: 0 auto;
 }
 #four-step .four-step-ul {
     list-style: none;
@@ -36,4 +42,37 @@
     justify-content: center;
     align-items: center;
     margin-bottom: var(--fontSize32);
+}
+@media (min-width: 64rem) {
+    #hero{
+        text-align: center;
+    }
+    #hero .title{
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: var(--fontSize32);
+    }
+    #hero .text{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    #services .services-ul {
+        display: flex;
+        gap: var(--fontSize48);
+    }
+    #four-step h2.title, h4.text{
+        margin: 0 auto var(--fontSize32);
+        text-align: center;
+    }
+    #four-step .four-step-ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--fontSize32);
+    }
+    #four-step .four-step-li {
+        text-align: center;
+    }
+    #four-step .four-step-li .icon-box {
+        margin: 0 auto var(--fontSize32);
+    }
 }

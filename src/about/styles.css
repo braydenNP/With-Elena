@@ -9,7 +9,7 @@
     color: var(--bodyTextColor);
 }
 @media (min-width: 64rem) {
-    main .title{
+    #meet-coach .title{
         max-width: none;
         margin-bottom: var(--fontSize96);
     }

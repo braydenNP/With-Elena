@@ -141,6 +141,9 @@
         right: -10px;
         z-index: -1;
     }
+    .img-decor.left::before {
+        left: -10px;
+    }
 
     .topper {
         font-size: var(--topperFontSize);
@@ -224,6 +227,16 @@
         color: var(--bodyTextColorWhite);
         outline-color: var(--primary);
     }
+    .button-solid.cta.white {
+        color: var(--bodyTextColor);
+        outline-color: var(--bodyTextColor);
+    }
+
+    .button-solid.cta.white:hover {
+        background-color: var(--bodyTextColor);
+        color: var(--bodyTextColorWhite);
+        outline-color: var(--bodyTextColor);
+    }
 
     .arrow {
     display: inline-block;
@@ -259,6 +272,15 @@
     .button-secondary:hover {
         color: var(--secondaryLight);
         outline: 2px solid var(--secondaryLight);
+    }
+    .button-secondary.white {
+        color: var(--bodyTextColorWhite);
+        outline: 2px solid var(--bodyTextColorWhite);
+    }
+    .button-secondary.white:hover {
+        color: var(--primary);
+        outline: 2px solid var(--primary);
+        background-color: var(--bodyTextColorWhite);
     }
 
     .skip {

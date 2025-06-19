@@ -1,0 +1,125 @@
+#hero {
+    background-image: url(/images/handwriting.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: calc(clamp(7.5rem, 15.64vw, 12.5rem) + 11rem) 1rem calc(clamp(7.5rem, 15vw, 12rem) + 8rem);
+    z-index: 0;
+}
+#hero::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: -1;
+}
+
+#hero .title {
+    color: var(--bodyTextColorWhite);
+    z-index: 10;
+}
+#hero .text{
+    color: var(--bodyTextColorWhite);
+    z-index: 10;
+    margin-bottom: var(--fontSize48);
+}
+#hero .button-secondary {
+    z-index: 10;
+}
+#partnership .img-box {
+    margin-bottom: var(--fontSize32);
+}
+#features .title {
+    text-align: center;
+    margin-bottom: var(--fontSize48);
+}
+#features .img-box{
+    margin-bottom: var(--fontSize32);
+}
+#features .features-ul {
+    list-style: none;
+}
+#features .features-li {
+    box-shadow: 0 0 14.5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--fontSize36);
+    margin-bottom: var(--fontSize32);
+    text-align: center;
+    padding: 1rem;
+}
+#features .features-li .icon-box {
+    border-radius: 50%;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.1);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--fontSize48);
+}
+#features .features-li .text {
+    margin: 0 auto;
+}
+#for-you .title{
+    text-align: center;
+}
+#for-you .fy-ul {
+    list-style: none;
+}
+#for-you .fy-li {
+    background-color: var(--bodyTextColor);
+    padding: 5px 30px;
+    border-radius: 8px;
+    margin: 0 auto var(--fontSize32);
+    max-width: fit-content;
+}
+#for-you .fy-li .text {
+    color: var(--bodyTextColorWhite);
+    max-width: none;
+}
+.testimony-li {
+    box-shadow: 0 0 14.5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--fontSize32);
+    margin: 0 auto var(--fontSize32);
+    max-width: 80vw;
+    width: 700px;
+    padding: var(--fontSize96) var(--fontSize48);
+}
+#cta {
+    background-color: #FFEDE9;
+    text-align: center;
+}
+#cta .text {
+    margin: 0 auto var(--fontSize48);
+}
+@media (min-width: 64rem){
+    #hero {
+        text-align: center;
+    }
+    #hero .text {
+        margin: 0 auto;
+        margin-bottom: var(--fontSize32);
+        max-width: none;
+    }
+    #partnership .container{
+        display: flex;
+    }
+    #partnership .img-box {
+        margin-right: var(--fontSize36);
+    }
+    #partnership .content-text {
+        margin: auto 0
+    }
+    #features .features-ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--fontSize32);
+    }
+    #features .features-li {
+        padding: 3rem 1rem;   
+    }
+}

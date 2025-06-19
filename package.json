@@ -4,7 +4,7 @@
   "description": "Brayden's Static Site template",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve", 
+    "start": "eleventy --serve",
     "build": "eleventy"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/braydenNP/website-template#readme",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.0"
+    "@11ty/eleventy": "^3.1.0",
+    "luxon": "^3.6.1"
   }
 }
